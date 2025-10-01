@@ -1,0 +1,54 @@
+.swiper-beneficios .swiper-slide {
+  width: 80%; /* ajusta según lo que quieras mostrar */
+}
+.swiper-razones .swiper-slide {
+  width: 80%; /* ajusta según lo que quieras mostrar */
+}
+.swiper-pasos .swiper-slide {
+  width: 80%; /* ajusta según lo que quieras mostrar */
+}
+
+/* Ajustar flechas del Swiper */
+.swiper-experiencia {
+  position: relative; /* asegura que las flechas se posicionen relativo al swiper */
+  @media (min-width: 991px){
+        padding: 0 60px; /* espacio a los lados para que no se monten sobre el contenido */
+    }
+}
+
+.swiper-experiencia .swiper-button-next,
+.swiper-experiencia .swiper-button-prev {
+  top: 61%; 
+  transform: translateY(-50%); /* centrar verticalmente */
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ff6600; /* estilo opcional */
+  border-radius: 8px;         /* esquinas redondeadas */
+  background: #fff;           /* fondo blanco */
+  color: #ff6600;             /* color de la flecha */
+}
+
+/* Flecha izquierda */
+.swiper-experiencia .swiper-button-prev {
+  left: 10px; /* fuera del carrusel */
+}
+
+/* Flecha derecha */
+.swiper-experiencia .swiper-button-next {
+  right: 10px; /* fuera del carrusel */
+}
+
+/* Quitar estilos default de Swiper */
+.swiper-experiencia .swiper-button-next::after,
+.swiper-experiencia .swiper-button-prev::after {
+  font-size: 16px; /* tamaño del ícono */
+}
+
+/* Ocultar flechas en < 991px */
+@media (max-width: 991px) {
+  .swiper-experiencia .swiper-button-next,
+  .swiper-experiencia .swiper-button-prev {
+    display: none !important;
+  }
+}
+

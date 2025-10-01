@@ -1,0 +1,29 @@
+backend:
+  name: github
+  repo: ymolina-existaya/promigas-hub
+  branch: master
+
+media_folder: "images/pages"
+public_folder: "images/pages"
+
+collections:
+  - name: "pages"
+    label: "Páginas"
+    files:
+      - file: "public/content/home.md"
+        label: "Home"
+        name: "home"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Contenido", name: "body", widget: "markdown" }
+
+      - file: "public/content/contact.json"
+        label: "Contacto"
+        name: "contact"
+        format: "json"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Teléfono", name: "phone", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Dirección", name: "address", widget: "text" }
+          - { label: "Contenido", name: "body", widget: "markdown" }

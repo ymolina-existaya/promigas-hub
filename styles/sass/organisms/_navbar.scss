@@ -1,0 +1,31 @@
+.nav-pills{
+    .nav-item{
+        .nav-link{
+            font-family: var(--ey-font-primary);
+            color: var(--bs-light);
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 150%;
+        }
+        .nav-link.active{
+            font-weight: 700 !important;
+            background-color: transparent;
+        }
+    }
+}
+
+.nav-responsive {
+    @media (max-width: 991px) {
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+}
+
+.nav-responsive.hidden {
+    @media (max-width: 991px) {
+        /* transform: translateY(-100%);
+        opacity: 0;
+        pointer-events: none; */
+        display: none;
+    }
+}

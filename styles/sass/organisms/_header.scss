@@ -1,0 +1,38 @@
+.header{
+    //padding-bottom: 84px;
+    .navbar{
+        background: linear-gradient(180deg, #0000 0%, rgba(0, 0, 0, 0.03) 100%);
+        .content{
+            display: flex;
+            padding-block: 12px;
+            justify-content: space-between;
+            align-items: center;
+            gap: 32px;
+            align-self: stretch;
+
+            .logos{
+                @media (max-width: 991px) {
+                    padding-bottom: 8px;
+                }
+            }
+
+            .nav-responsive {
+                @media (max-width: 991px) {
+                    flex-wrap: inherit;
+                    overflow-y: hidden;
+                    white-space: nowrap;
+                }
+            }
+
+            @media (max-width: 991px) {
+                display: block;
+                flex-direction: column;
+                align-items: start;
+            }
+        }
+    } 
+
+    @media (max-width: 1399px) {
+        //padding-bottom: 120px;
+    }
+}

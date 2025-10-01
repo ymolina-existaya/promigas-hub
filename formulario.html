@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="title" content="Formulario Promigas" />
+    <meta name="description" content="Formulario Promigas" />
+    <meta name="keywords" content="Formulario Promigas" />
+
+    <meta property="og:url" content="" />
+    <meta property="og:title" content="Formulario Promigas" />
+    <meta property="og:description" content="Formulario Promigas" />
+    <meta property="og:image" content="images/image-seo.jpg" />
+
+    <meta name="twitter:title" content="Formulario Promigas" />
+    <meta name="twitter:description" content="Formulario Promigas" />
+    <meta name="twitter:image" content="images/image-seo.jpg" />
+
+    <title>
+        Formulario Promigas
+    </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Titillium+Web:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.min.css">
+    <link rel="stylesheet" href="styles/icomoon/style.css">
+</head>
+
+<body>
+
+    <header class="form-header">
+        <div class="container">
+            <nav class="form-nav">
+                <div class="brands">
+                    <a href="#" aria-label="Ir a GDO" rel="noopener noreferrer">
+                        <img src="images/logos/logo-gdo-color.svg" 
+                            alt="Logo GDO" 
+                            class="img-fluid"
+                            width="64" height="40" 
+                            loading="eager" 
+                            fetchpriority="high"
+                        >
+                    </a>
+                    <span class="line"></span>
+                    <a href="#" aria-label="Ir a Surtigas" rel="noopener noreferrer">
+                        <img src="images/logos/logo-surt-color.svg" 
+                            alt="Logo Surtigas"
+                            class="img-fluid" 
+                            width="102" height="40" 
+                            loading="eager" 
+                            fetchpriority="high"
+                        >
+                    </a>
+                </div>
+                <a href="index.html" class="btn" aria-label="Ir al Home">
+                    <span class="icon-home"></span>
+                    Regresar
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="form-main">
+        <div class="container">
+            <div class="form-wrapper">
+                <h1 id="titulo"></h1>
+                <ul>
+                    <li><strong>Teléfono:</strong> <span id="phone"></span></li>
+                    <li><strong>Email:</strong> <span id="email"></span></li>
+                    <li><strong>Dirección:</strong> <span id="address"></span></li>
+                </ul>
+                <div id="contenido"></div>
+
+                <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+                <div class="text-center">
+                    <h1 class="h1 mb-3">¡Estás a pocos pasos de ser prionero de la <span class="text-orange"> Energía Solar</span>!</h1>
+                    <p class="text-lg text-primary">Todos los campos son requeridos.</p>
+                </div>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-upper">
+                            <span class="icon-user"></span>
+                        </div>
+                        <div class="step-lower">
+                            <h5 class="h5">Datos personales y de contacto</h5>
+                        </div>
+                    </div>
+                    <div class="dots dots-first">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <div class="step">
+                        <div class="step-upper">
+                            <span class="icon-home"></span>
+                        </div>
+                        <div class="step-lower">
+                            <h5 class="h5">Información de domicilio</h5>
+                        </div>
+                    </div>
+                    <div class="dots dots-second">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <div class="step">
+                        <div class="step-upper">
+                            <span class="icon-check"></span>
+                        </div>
+                        <div class="step-lower">
+                            <h5 class="h5">Finalización del registro</h5>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-center text-lg text-primary">Para iniciar, nos gustaría saber cómo nos comunicaremos contigo.</p>
+                <form class="form row g-4 needs-validation" novalidate>
+                    <div class="col-md-6">
+                        <label for="validationCustom01" class="form-label">Nombre(s)</label>
+                        <input type="text" 
+                            class="form-control" 
+                            id="validationCustom01" 
+                            placeholder="ej. Juan Luis" 
+                            required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="validationCustom02" class="form-label">Apellido(s)</label>
+                        <input type="text" 
+                            class="form-control" 
+                            id="validationCustom02" 
+                            placeholder="ej. Morera Jaramillo" 
+                            required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="validationCustom03" class="form-label">Correo electrónico</label>
+                        <input type="email" 
+                            class="form-control" 
+                            id="validationCustom03" 
+                            placeholder="correo@ejemplo.com"
+                            required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="validationCustom04" class="form-label">Celular</label>
+                        <div class="input-group has-validation">                            
+                            <input type="tel" 
+                                class="form-control" 
+                                id="validationCustom04" 
+                                placeholder="+57"
+                                required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="validationCustom05" class="form-label">Documento de identidad</label>
+                        <select class="form-select" id="validationCustom05" required>
+                            <option selected disabled value="">Cédula de ciudadanía</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="validationCustom06" class="form-label">Número de identidad</label>
+                        <input type="tel" 
+                            class="form-control" 
+                            id="validationCustom06" 
+                            placeholder="0 0 0 0 0 0 0 0 0 0"
+                            required>
+                        <div class="invalid-feedback">
+                            Please provide a valid zip.
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label" for="invalidCheck">
+                                He leído y acepto la política de privacidad y tratamiento de datos personales.
+                            </label>
+                            <div class="invalid-feedback">
+                                You must agree before submitting.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-primary" type="submit">
+                            Siguiente
+                            <span class="icon-right-arrow"></span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+    <script src="scripts/form.js" defer></script>
+    <script>        
+        fetch('content/contact.json')
+            .then(res => res.json())
+            .then(data => {
+                console.log('data', data);
+
+                document.title = data.title;
+                document.getElementById('titulo').textContent = data.title;
+                document.getElementById('phone').textContent = data.phone;
+                document.getElementById('email').textContent = data.email;
+                document.getElementById('address').textContent = data.address;
+                document.getElementById('contenido').innerHTML = marked.parse(data.body);
+            });
+    </script>
+</body>
+</html>

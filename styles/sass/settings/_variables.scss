@@ -1,0 +1,35 @@
+
+:root {
+  --ey-font-primary: 'Titillium Web', sans-serif;;
+
+  &, [data-bs-theme=light] {
+    --bs-primary: #022e40;
+    --bs-secondary: #FB6914;
+    --bs-secondary-text: #FDE452;
+    --bs-secondary-bg: #FFF6ED;
+    --bs-light: #F8F9FA;
+    --ey-white: #FFF;
+    --ey-dark-blue-900: #0F506A;
+    --ey-orange-200: #FFD3A9;
+    --ey-orange-600: #E44B0A;
+    
+    
+
+    --bs-teal: #549CB5;
+    --bs-gray-dark: #383838;
+    --bs-success: #009CA6;
+    --bs-danger: #B20620;
+    --bs-primary-rgb: 2, 46, 64;
+    --bs-secondary-rgb: 251, 105, 20;
+    --bs-success-rgb: 0, 156, 166;
+    --bs-danger-rgb: 8, 6, 32;
+    --bs-light-rgb: 245, 245, 245;
+    --bs-body-font-family: var(--ey-font-secondary);
+    --bs-body-color: var(--bs-gray-dark);
+    --ey-light-teal: #A3D5E6;
+    --ey-light-gray: #F0F1F2;
+    --ey-white-50: rgba(255, 255, 255, 0.50);
+    --ey-dark-blue-800: #0C627E;
+    --ey-green-400: #2FD8A3;
+  }
+}

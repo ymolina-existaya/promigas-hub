@@ -1,0 +1,175 @@
+// ==========================================================================
+// EFFECT CARDS SWIPER CUSTOM STYLES
+// ==========================================================================
+
+
+.effectCardsSwiper {
+    width: 424px;
+    height: 640px;
+
+    @media (max-width: 575px) {
+        width: 311px;
+        height: 584px;
+    }
+
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid var(--bs-white);
+        background: rgba(0, 0, 0, 0.3);
+        pointer-events: none;
+        overflow: hidden;
+        border-radius: 8px;
+
+        &-active {
+            pointer-events: auto;
+        }
+
+        .video-placeholder {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+
+            &:hover {
+                transform: scale(1.01);
+            }
+
+            .img-fluid {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 8px;
+            }
+
+            .btn-play {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-width: 0;
+                background: transparent;
+                pointer-events: auto;
+                cursor: pointer;
+
+                .icon-youtube:before {
+                    font-size: 32px;
+                    color: var(--bs-white);
+                }
+            }
+        }
+
+        .video-wrapper {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+
+            &.video-paused {
+                .video-overlay {
+                    background: rgba(0, 0, 0, 0.3);
+                }
+            }
+
+            .yt-iframe {
+                width: 100%;
+                height: 100%;
+                border: none;
+                pointer-events: auto;
+            }
+
+            .video-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 2;
+                display: none;
+                cursor: pointer;
+                background: rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:hover {
+                    background: rgba(0, 0, 0, 0.2);
+                }
+
+                .error-message {
+                    color: var(--bs-white);
+                    font-size: 14px;
+                    text-align: center;
+                    background: rgba(255, 0, 0, 0.8);
+                    padding: 8px 16px;
+                }
+
+                @media (min-width: 768px) {
+                    // Indicador de navegación
+                    &::before {
+                        content: "▶";
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        font-size: 24px;
+                        color: var(--bs-white);
+                        opacity: 0.8;
+                        transition: all 0.3s ease;
+                    }
+    
+                    &:hover::before {
+                        opacity: 1;
+                        transform: translate(-50%, -50%) scale(1.1);
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+// Mejoras adicionales para YouTube Shorts
+.effectCardsSwiper {
+    .swiper-slide {
+        .video-wrapper {
+            .yt-iframe {
+                // Permitir interacción con controles de YouTube
+                pointer-events: auto;
+                
+                // Ocultar controles nativos cuando está pausado
+                &.video-paused {
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+}
+
+// Indicadores de navegación mejorados
+.video-overlay {
+    // Indicador de swipe
+    &::after {
+        content: "← Desliza para navegar →";
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: max-content;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.7);
+        background: rgba(0, 0, 0, 0.5);
+        padding: 4px 8px;
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+
+    &:hover::after {
+        opacity: 1;
+    }
+}

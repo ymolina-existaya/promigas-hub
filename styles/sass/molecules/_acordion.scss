@@ -1,0 +1,65 @@
+.accordion{
+    &-preguntas-frecuentes{
+        border-radius: 32px 32px 32px 32px;
+        border: 1px solid var(--ey-orange-200);
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(8px);
+        padding: 32px;
+
+        .accordion-item:first-of-type {
+            border-radius: 32px 32px 0px 0px;
+            .accordion-button{
+                border-radius: 32px 32px 0px 0px;
+            }
+        }
+
+        .accordion-item:last-of-type {
+            border-radius: 0px 0px 32px 32px;
+            .accordion-button{
+                border-radius: 0px 0px 32px 32px !important;
+            }
+        }
+
+        .accordion-item{
+            border: none;
+
+            .accordion-button{
+                color: var(--bs-secondary);
+                font-family: var(--ey-font-primary);
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 120%; /* 24px */
+            }
+
+            .accordion-button:not(.collapsed) {
+                color: var(--bs-primary);
+                opacity: 0.75;
+                background: none;
+                box-shadow: none;
+            }
+            .accordion-button:focus {
+                box-shadow: none;
+            }
+
+            .accordion-button::after {
+                content: "\e911";
+                font-size: 16px; 
+                font-weight: 400;
+                font-family: 'icomoon';
+                color: var(--bs-secondary);
+                background-image: none;
+            }
+
+            .accordion-button:not(.collapsed)::after {
+                content: "\e912";
+                font-size: 3px; 
+                line-height: 20px;
+            }
+        }
+
+        @media (max-width: 991px){
+            padding: 8px 24px 8px 24px;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.bg{
+    &-banner{
+        background: var(--ey-white) !important;
+        box-shadow: 0 2px 4px 0 rgba(37, 37, 39, 0.04), 0 4px 16px 0 rgba(37, 37, 39, 0.04) !important;
+        .nav-pills{
+            .nav-item{
+                .nav-link{
+                    color: var(--bs-primary);
+                    font-weight: 400;
+                }
+            }
+        }
+
+        .btn-outline-primary{
+            color: var(--bs-secondary);
+        }
+    }
+
+    &-pioneros{
+        background-image: url(../images/pages/fondo-pioneros.png);
+        background-position: right bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+        @media (max-width: 991px){
+            background-image: url(../images/pages/fondo-pioneros-res.png);
+
+        }
+    }
+}
