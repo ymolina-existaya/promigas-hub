@@ -1,0 +1,13 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/admin/*", "/images/*", "/styles/*", "/scripts/*", "/*.{css,js,json,png,jpg,jpeg,gif,svg,ico}"]
+  },
+  "routes": [
+    {
+      "route": "/admin",
+      "redirect": "/admin/",
+      "statusCode": 301
+    }
+  ]
+}
