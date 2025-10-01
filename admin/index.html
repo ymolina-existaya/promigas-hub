@@ -9,15 +9,25 @@
 </head>
 
 <body>
-  
+  <!-- Netlify Identity Widget -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+  <!-- Desactivar auto-init de Decap -->
+  <script>
+    window.CMS_MANUAL_INIT = true;
+  </script>
+
+  <!-- Decap CMS -->
   <script src="https://unpkg.com/decap-cms@latest/dist/decap-cms.js"></script>
+
+  <!-- Inicialización manual del CMS -->
   <script>
     CMS.init({
       config: "/admin/config.yml"
     });
   </script>
 
+  <!-- Netlify Identity -->
   <script>
     if (window.netlifyIdentity) {
       window.netlifyIdentity.init({
@@ -34,5 +44,4 @@
     }
   </script>
 </body>
-
 </html>
