@@ -1,23 +1,23 @@
 backend:
-  name: github
-  repo: ymolina-existaya/promigas-hub
-  branch: master
+  name: git-gateway
+  branch: main
 
 media_folder: "images/pages"
-public_folder: "images/pages"
+public_folder: "/images/pages"
 
 collections:
   - name: "pages"
     label: "Páginas"
     files:
-      - file: "public/content/home.md"
+      - file: "content/home.json"
         label: "Home"
         name: "home"
+        format: "json"
         fields:
           - { label: "Título", name: "title", widget: "string" }
           - { label: "Contenido", name: "body", widget: "markdown" }
-
-      - file: "public/content/contact.json"
+      
+      - file: "content/contact.json"
         label: "Contacto"
         name: "contact"
         format: "json"
@@ -26,4 +26,3 @@ collections:
           - { label: "Teléfono", name: "phone", widget: "string" }
           - { label: "Email", name: "email", widget: "string" }
           - { label: "Dirección", name: "address", widget: "text" }
-          - { label: "Contenido", name: "body", widget: "markdown" }

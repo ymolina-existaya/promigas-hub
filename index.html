@@ -33,6 +33,18 @@
     
 </head>
 
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <body>
 
     <header class="header">
@@ -120,34 +132,22 @@
 </section>
 
 
- <h1 id="titulo"></h1>
-  <div id="contenido"></div>
+    <h1 id="titulo"></h1>
+    <div id="contenido"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/gray-matter@4.0.3/dist/gray-matter.min.js"></script> -->
 
-    <script>
-        // Cada HTML apunta a un .md distinto
-        fetch('content/home.md')
-        .then(res => res.text())
-        .then(text => {
-            const match = /^---\n([\s\S]+?)\n---\n([\s\S]*)$/m.exec(text);
-            let title = "Sin título", body = text;
+    <script>        
+        fetch('content/home.json')
+            .then(res => res.json())
+            .then(data => {
+                console.log('data', data);
 
-            if (match) {
-                const yaml = match[1];
-                body = match[2];
-                // extraer título del frontmatter con regex simple
-                const titleMatch = /title:\s*["']?(.+?)["']?$/m.exec(yaml);
-                if (titleMatch) title = titleMatch[1];
-            }
-
-            document.title = title;
-            document.getElementById('titulo').textContent = title;
-            document.getElementById('contenido').innerHTML = marked.parse(body);
-        });
+                document.title = data.title;
+                document.getElementById('titulo').textContent = data.title;
+                document.getElementById('contenido').innerHTML = marked.parse(data.body);
+            });
     </script>
-
 
 <section id="beneficios" class="beneficios">
     <div class="container">
