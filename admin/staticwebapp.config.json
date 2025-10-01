@@ -1,0 +1,23 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/admin/*", "/images/*", "/styles/*", "/scripts/*", "/*.{css,js,json,png,jpg,jpeg,gif,svg,ico}"]
+  },
+  "routes": [
+    {
+      "route": "/admin",
+      "redirect": "/admin/",
+      "statusCode": 301
+    },
+    {
+      "route": "/admin/config.yml",
+      "headers": {
+        "Content-Type": "text/yaml; charset=utf-8"
+      }
+    }
+  ],
+  "mimeTypes": {
+    ".yml": "text/yaml",
+    ".yaml": "text/yaml"
+  }
+}
