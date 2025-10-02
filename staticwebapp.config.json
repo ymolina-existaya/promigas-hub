@@ -1,0 +1,32 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": [
+      "/admin/*",
+      "/images/*",
+      "/styles/*",
+      "/scripts/*",
+      "/*.{css,js,json,png,jpg,jpeg,gif,svg,ico}"
+    ]
+  },
+  "routes": [
+    {
+      "route": "/admin/config.yml",
+      "headers": {
+        "Content-Type": "text/yaml; charset=utf-8"
+      }
+    },
+    {
+      "route": "/admin",
+      "rewrite": "/admin/index.html"
+    },
+    {
+      "route": "/admin/*",
+      "rewrite": "/admin/index.html"
+    }
+  ],
+  "mimeTypes": {
+    ".yml": "text/yaml",
+    ".yaml": "text/yaml"
+  }
+}
